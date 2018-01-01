@@ -1,12 +1,12 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.16;
 
-contract SimpleToken {
+contract JeansToken {
     /* Public variables of the token */
     string public standard = 'Token 0.1';
-    string public name;
-    string public symbol;
-    uint8 public decimals;
-    uint256 public totalSupply;
+    string public name = JeansToken;
+    string public symbol = JEANS;
+    uint8 public decimals = 8;
+    uint256 public totalSupply = 9876543210;
 
     /* This creates an array with all balances */
     mapping (address => uint256) public balanceOf;
@@ -17,16 +17,16 @@ contract SimpleToken {
 
     /* Initializes contract with initial supply tokens to the creator of the contract */
     function SimpleToken(
-        uint256 initialSupply,
-        string tokenName,
-        uint8 decimalUnits,
-        string tokenSymbol
+        uint256 initialSupply = 9876543210,
+        string tokenName = JeansToken,
+        uint8 decimalUnits = 8,
+        string tokenSymbol = JEANS
         ) {
         balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens
-        totalSupply = initialSupply;                        // Update total supply
-        name = tokenName;                                   // Set the name for display purposes
-        symbol = tokenSymbol;                               // Set the symbol for display purposes
-        decimals = decimalUnits;                            // Amount of decimals for display purposes
+        totalSupply = 9876543210 ;                        // Update total supply
+        name = JeansToken;                                   // Set the name for display purposes
+        symbol = JEANS;                               // Set the symbol for display purposes
+        decimals = 8;                            // Amount of decimals for display purposes
     }
 
     /* Send coins */
